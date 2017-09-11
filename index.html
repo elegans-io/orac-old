@@ -122,16 +122,16 @@
       La maniera pi&ugrave; facile per usare ORAC &egrave; servirsi un <a href="http://emailmarketingblog.it/blog/2016/01/19/piattaforme-italiane-lemail-marketing" target="_blank">Email Service Provider</a> partner --contattaci per sapere se il tuo ESP lo &egrave;.</p>
       <p>Quando prepari il template da inviare per la tua Newsletter/Direct Email Marketing, non devi far altro che inserire i placeholders di ORAC. Per esempio:</p>
       <p><code>
-      {{ORAC.greeting}},
-      grazie per aver scelto la Manuzio Libri per l'acquisto de {{ORAC.purchase_history[0].name}}. In base alla {{ORAC.grammatical_person.2.possessive}} recente attivit&agrave;, siamo lieti di poter{{ORAC.grammatical_person.2.dative}} offrire uno sconto del 10% sui seguenti prodotti:
-
-      {{ORAC.surf_history[0].image}}
-      {{ORAC.recommended_items[0:3].image}}
-
-      A presto,
-      Il Team di Manuzio Libri
-      {banner}
-      {unsubscribe_footer}
+	      {{ORAC.greeting}},</br>
+      grazie per aver scelto la Manuzio Libri per l'acquisto de {{ORAC.purchase_history[0].name}}. In base alla {{ORAC.grammatical_person.2.possessive}} recente attivit&agrave;, siamo lieti di poter{{ORAC.grammatical_person.2.dative}} offrire uno sconto del 10% sui seguenti prodotti:</br>
+</br>
+      {{ORAC.surf_history[0].image}}</br>
+      {{ORAC.recommended_items[0:3].image}}</br>
+</br>
+      A presto,</br>
+      Il Team di Manuzio Libri</br>
+      {banner}</br>
+      {unsubscribe_footer}</br>
       </code>
       </p>
 
