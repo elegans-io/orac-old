@@ -114,8 +114,36 @@
       <p>ORAC &egrave; un ecosistema di software che, dal processamento del linguaggio naturale all'analisi delle interazioni di ogni utente, permette la generazione in real-time di messaggi altamente personalizzati.</p>
       <p>ORAC nasce da anni di esperienza nello sviluppo di sistemi di Intelligenza Artificiale applicati alla medicina e al customer support. Due palestre dove non sono ammessi errori.</p>
     </section>
+    
     <section>
-      <h1 id="uso">Come funziona</h1>
+      <h1 id="usage">Come si usa</h1>
+      La maniera pi&ugrave; facile per usare ORAC &egrave; servirsi un <a href="http://emailmarketingblog.it/blog/2016/01/19/piattaforme-italiane-lemail-marketing" target="_blank">Email Service Provider</a> partner --contattaci per sapere se il tuo ESP lo &egrave;.</p>
+      <p>Quando prepari il template da inviare per la tua Newsletter/Direct Email Marketing, non devi far altro che inserire i placeholders di ORAC. Per esempio:</p>
+      <p><code>
+      {{ORAC.greeting}},
+      grazie per aver scelto la Manuzio Libri per l'acquisto de {{ORAC.purchase_history[0].name}}. In base alla {{ORAC.grammatical_person.2.possessive}} recente attivit&agrave;, siamo lieti di poter{{ORAC.grammatical_person.2.dative}} offrire uno sconto del 10% sui seguenti prodotti:
+
+      {{ORAC.surf_history[0].image}}
+      {{ORAC.recommended_items[0:3].image}}
+
+      A presto,
+      Il Team di Manuzio Libri
+      {banner}
+      {unsubscribe_footer}
+      </code>
+      </p>
+
+      <p>Si tradurr&agrave; per l'utente Mario Rossi, di anni 76, che ha recentemente comprato vari libri di storia, tra cui  di storia ed ha visitato ultimamente la pagine del libro "Piombo Rosso" di Giorgio Galli, nel seguente messaggio:</p>
+      <div>
+        <img source="images/to_rossi_messaggio.png">
+      </div>
+            
+      <p>Puoi iniziare ad usare ORAC da subito. <a href="#contatti">Contattaci</a> e vedremo insieme come caricare nel sistema, in forma anonimizzata, l'anagrafica clienti, il catalogo prodotti e le interazioni tra i due.</p>
+      <p>Se hai siti di e-commerce, potremo inoltre inserire all'interno di questi il codice JavaScript per il tracciamento in realtime</p>
+      </section>
+
+      <section>
+      <h1 id="tech">La tecnologia dietro ORAC</h1>
       <p>ORAC viene "allenato" (trained) osservando le interazioni utente-brand. Passate (e.g. web log e acquisti) e presenti (codice javascript nei siti).</p>
       <p>Col tempo, nulla viene pi&ugrave; lasciato al caso. Il soggetto: meglio "Offerta per te" o "Sconto imperdibile"? In apertura, meglio<code>Caro Mario</code> oppure <code>Egregio sig. Rossi</code>? Consigliare l'acquisto di pasta a grano duro o di cibo senza glutine?</p>
       <p>Il messaggio, sulla base di un template, viene costruito per ogni utente in modo da massimizzare apertura e click rate. E soddisfazione da entrambe le parti. Il tutto scientificamente.</p>
@@ -186,39 +214,15 @@
 
     </section>
     
-    <section>
-      <h1 id="usage">Installazione</h1>
-
-      <p>Puoi iniziare ad usare ORAC da subito. <a href="#contatti">Contattaci</a> e vedremo insieme come caricare nel sistema, in forma anonimizzata, l'anagrafica clienti, il catalogo prodotti e le interazioni tra i due.</p>
-      <p>Se hai siti di e-commerce, potremo inoltre inserire all'interno di questi il codice JavaScript per il tracciamento in realtime</p>
-      <p>Non appena ORAC avr&agrave; analizzato i dati, avrai subito a tua disposizione un un'immagine per ogni cliente con i prodotti raccomandati da inviare con il tuo Email Service Provider di fiducia</p>
-
 
   </main>
 
   <footer>
 
     <section>
-      <h1>elegans.io 2017</h1>
-
       <p>
-	Share with attribution
+      elegans.io 2017
       </p>
-
-    </section>
-
-
-    <section class="license">
-
-      <h1>Apache License</h1>
-
-      <p>ORAC is licensed under Apache Licence.</p>
-
-      <p>Copyright (c) 2017 elegans.io</p>
-
-    </section>
-    <section>
-      <img class="logo" src="images/new-logo-white.svg" alt="Logo">
     </section>
   </footer>
 
