@@ -18,10 +18,16 @@
 
 <script src="js/fastclick.js"></script>
 <script src="js/app.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- jQuery Old for Autocomplete -->
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Autocomplete -->
+<script src="js/jquery.easy-autocomplete.min.js"></script> 
+<link rel="stylesheet" href="css/easy-autocomplete.css"> 
+<link rel="stylesheet" href="css/easy-autocomplete.themes.css"> 
 
 
+<!-- Progress bar-->
 <script>
   function move() {
     var elem = document.getElementById("myBar"); 
@@ -68,7 +74,7 @@
 <body itemscope itemtype="http://schema.org/WebApplication">
   <!-- Facebook like button -->
   <header>
-
+    
     <div class="content">
       <h1>
 	<img itemprop="image" itemprop="image" src="images/elegans_logo_banner_bn.svg" alt="Logo">
@@ -119,37 +125,67 @@
     <section>
       
       <h1 id="try">Demo</h1>
-
-      <p>Preparare i dati –tipicamente nell'ordine dei Terabyte– da dare in pasto ad una rete neurale non &egrave; cosa da potersi fare in una demo. Crediamo per&ograve; che avere un'idea di cosa sia ORAC sia importante.</p>
-      <p>Se ti capita di leggere qualche buon libro, puoi quindi testare il sistema di invio di messaggi personalizzati immettendo nella form sottostante i tuoi libri preferiti. Se sei un utente Anobii (o tra poco Goodreads) basta immettere il tuo ID, ORAC scaricher&agrave; i libri presenti sul tuo account</p>
+      
+      <p>Preparare i dati -tipicamente nell'ordine dei Terabyte-da dare in pasto ad una rete neurale non &egrave; cosa da potersi fare in una demo. Crediamo per&ograve; che avere un'idea di cosa sia ORAC sia importante.</p>
+      <p>Se ti capita di leggere qualche buon libro, puoi quindi testare il sistema di invio di messaggi personalizzati immettendo nella form sottostante i tuoi libri preferiti. Se sei un utente Anobii (o tra poco Goodreads) basta immettere il tuo ID, ORAC scaricher&agrave; i libri presenti sul tuo account</p>
       <p>Fornendo il tuo indirizzo mail riceverai un messaggio personalizzato con i libri che ti possono interessare. Potrai cos&igrave; verificare le capacit&agrave; predittive di ORAC e la semplicit&agrave; del sistema.</p>
       <p>
-          <div>
-                  <a href="#usage"><button class="button">Cerca i miei libri</button></a>
-		  <a href="#anobii"><button class="button" href="#anobii">Account Anobii</button></a>
-          </div>
-     </p>    	
-      <h2 id="Cerca libri">Cerca</h2>
-  <script>
-  $( function() {
-    var availableTags = [
-      "1984 / George Orwell",
-      "Il Tamburo di Latto / G&uuml;nter Grass",
-      "Il Maestro e Margherita / Mikhail Bulgakov",
-      "Cuore di Cane /  Mikhail Bulgakov",
-      "Se Questo &egrave; un Uomo / Primo Levi",
-      "Il Broker / John Grisham",
-      "Cento Anni di Solitudine / Gabriel Garcia Marquez",
-      "Lettere Contro la Guerra / Tiziano Terzani"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
-          
-    </section>
+        <div>
+          <a href="#cerca-libri"><button class="button">Cerca i miei libri</button></a>
+	  <a href="#anobii"><button class="button" href="#anobii-id">Account Anobii</button></a>
+        </div>
+      </p>    	
+      <h2 id="cerca-libri">Cerca</h2>
+      <div class="col-sm-12" >
+        <div class="form-group col-sm-4">
+          <input id="provider-json" class="form-control"  placeholder="Cerca libri" /><button class="button">Aggiungi</button>
+              </br>
+              <button class="button" href="demo-email">Ho finito</button>
+              <script>
+		
+		$(document).ready(function() {
+		var options = {
+		url: "resources/libri.json",
+		
+		getValue: "title",
+		
+		list: {
+		match: {
+		enabled: true
+		}
+		}
+		};
+		
+		$("#provider-json").easyAutocomplete(options);
+		});
+		
+              </script>              
+        </div>					
+      </div>
+      <h2 id="anobii-id">Utente Anobii</h2>
+      <p>Entra in Anobii, vai su "La mia libreria" e guarda l'indirizzo della pagina (l'URL).
+        Copia quello che trovi tra <code>.com/</code> e <code>/profile</code></p>
+      <p>Per esempio: <code>http://www.anobii.com/IDUTENTEANOBII/profile#books_library</code></p>
+      <div class="col-sm-12" >
+        <div class="form-group col-sm-4">
+          <input class="form-control"  placeholder="IDUTENTEANOBII" />
+          <button class="button" href="#demo-email">Recupera i miei libri</button>
+        </div>
+      </div>
 
+      <h2 id="demo-email">Ricevi il messaggio personalizzato</h2>
+      <p>Inserendo la tua mail e cliccando su "Invia", autorizzi etc etc</p>
+      <div class="col-sm-12" >
+        <div class="form-group col-sm-4">
+          <input class="form-control"  placeholder="nome@example.com" />
+          <button class="button" href="#demo-email">Invia</button>
+        </div>
+      </div>
+
+      
+
+    </section>
+    
     <section>
       <h1 id="usage">Uso</h1>
 
