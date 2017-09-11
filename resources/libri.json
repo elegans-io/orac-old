@@ -1,14 +1,14 @@
 [
     {
-        title: "Primo Libro",
-        author: "Autore Uno"
+        "title": "Primo Libro",
+        "author": "Autore Uno"
     },
     {
-        title: "Secondo Libro",
-        author: "Autore Due"
+        "title": "Secondo Libro",
+        "author": "Autore Due"
     },
     {
-        title: "Terzo Libro",
-        author: "Autore Tre"
+        "title": "Terzo Libro",
+        "author": "Autore Tre"
     }
 ]
