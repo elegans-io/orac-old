@@ -18,6 +18,9 @@
 
 <script src="js/fastclick.js"></script>
 <script src="js/app.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
 <script>
   function move() {
@@ -126,26 +129,39 @@
 		  <a href="#anobii"><button class="button" href="#anobii">Account Anobii</button></a>
           </div>
      </p>    	
-	                
-            
-            
-            <p>
-      <div id="myProgress">
-	<div id="myBar"></div>
-      </div>
-      </p>
-      <p>
-	<div>
-	  <button class="button" onclick="move()">Produci!</button>
-	</div>
-      </p>
-    </section>
-    
-    <section>
-      <h1 id="installation">Istallazione</h1>
-
-      <p>Inserisci il widget ORAC</p>
-
+      <h2 id="Cerca libri">Cerca</h2>
+  <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+          
     </section>
 
     <section>
