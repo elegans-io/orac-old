@@ -117,27 +117,18 @@
       
       <h1 id="try">Demo</h1>
 
-      <p>Preparare i dati da dare in pasto ad una rete neurale non &egrave; cosa da potersi fare in una demo. Crediamo per&ograve; che –per i visitatori pi&ugrave; versati tecnicamente– avere un'idea di cosa sia ORAC sia importante. Inoltre, ORAC lavora tipicamente on Terabyte di dati! </p>
-      <p>Se ti capita di leggere qualche buon libro, puoi però testare il sistema di invio di messaggi personalizzati immettendo nella form sottostante i tuoi libri preferiti –o, se sei un utente Anobii, direttamente il tuo ID, ORAC scaricher&agrave; i libri presenti sul tuo account.</p>
-      <p>Immettendo poi il tuo indirizzo mail riceverai un messaggio personalizzato con i libri che ti possono interessare. Potrai cos&igrave; verificare le capacit&agrave; predittive di ORAC e la semplicit&agrave; del sistema.</p>
+      <p>Preparare i dati –tipicamente nell'ordine dei Terabyte– da dare in pasto ad una rete neurale non &egrave; cosa da potersi fare in una demo. Crediamo per&ograve; che avere un'idea di cosa sia ORAC sia importante.</p>
+      <p>Se ti capita di leggere qualche buon libro, puoi quindi testare il sistema di invio di messaggi personalizzati immettendo nella form sottostante i tuoi libri preferiti. Se sei un utente Anobii basta immettere il tuo ID, ORAC scaricher&agrave; i libri presenti sul tuo account.</p>
+      <p>Fornendo il tuo indirizzo mail riceverai un messaggio personalizzato con i libri che ti possono interessare. Potrai cos&igrave; verificare le capacit&agrave; predittive di ORAC e la semplicit&agrave; del sistema.</p>
+  <ul class="tabs">
+    <li><a href="#user-site" class="selected">Immetto manualmente i libri che amo</a></li>
+    <li><a href="#project-site">Ho un account Anobii</a></li>
+  </ul>
 
-	<ul>
-	  <li><bold>anagrafica</bold> dei tuoi utenti. &Egrave; necessario avere il campo <code>user_id</code>. Tutti i campi che iniziano con l'underscore "_" non verranno usati per calcoli di similarit&agrave;, gli altri s&igrave;. Per esempio:</br><code>user_id,_nome,anno_nascita,comune,sesso,professione</code></br><code>u737e627f,Anna,1970,milano,f,medico</code></li>
-	  <li><b>catalogo<b> dei tuoi prodotti con le informazioni che possono aiutare a categorizzare il prodotto, pi&ugrave; –con l'underscore, quelle che servono solo per la creazione dei messaggi, come l'URL delle copertine dei libri. Per esempio: </br><code>product_id,nome,categoria,prezzo,produttore(editore?),creatore(autore?),descrizione,_url</code></br><code>9788845909320,Emicrania,"Neuroscienze Medicina",25.50,Adelphi,"Oliver Sacks","Emicrania non è solo una descrizione, ma ...",<a href="https://media.adelphi.it/spool/caecec7fdd7263464c07a1167aca6f25_w480_h_mw_mh_cs_cx_cy.jpg">https://adelphi..._cx_cy.jpg</a></code></li>
-	  <li><b>interazioni</b> utente-prodotto. Essendo una demo, e non avendo quindi  ORAC accesso diretto al tuo sito di ecommerce, serve sapere come in passato gli utenti hanno interagito coi prodotti. Per esempio:</br><code>user_id,product_id,tipo_interazione,data_interazione</code></br><code>u737e627f,9788845909320,acquisto,20170101</code></li>
-	</ul>
-      </p>
-      <p>
-      <div id="dropzone">
-	<form action="/upload" class="dropzone needsclick" id="demo-upload">  
-	  <div class="dz-message needsclick">
-	    Deposita qui quattro file denominati:</br><code>users.csv, products.csv, interactions.csv, template.csv</code><br />
-	    <span class="note needsclick">(Ricordati di non inserire dati sensibili)</span>
-	  </div>
-	</form>
-      </div>
-      </p>
-      <p>
+            
+            
+            
+            <p>
       <div id="myProgress">
 	<div id="myBar"></div>
       </div>
